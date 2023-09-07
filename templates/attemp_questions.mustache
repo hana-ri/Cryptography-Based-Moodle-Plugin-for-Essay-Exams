@@ -1,0 +1,21 @@
+<div class="card mt-5">
+    <div class="card-header">
+        <h5>Attemp Questions</h5>
+    </div>
+    <div class="card-body">
+        <form method="POST" id="secureForm">
+            {{#questions}}
+            <div class="form-group">
+                <label >{{ number }}. <p class="question d-inline">{{ question }}</p> <p>(Bobot Nilai: {{bobotnilai}})</p></label>
+                <textarea id="question_editor" class="form-control input_tag" name="answer_content_{{id}}"
+                    placeholder="Type answers here..." required></textarea>
+            </div>
+            {{/questions}}
+            <div class="row">
+                <div class="col-12 d-flex justify-content-end">
+                    <button type="submit" id="submitButton" class="btn btn-outline-primary">{{btnText}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

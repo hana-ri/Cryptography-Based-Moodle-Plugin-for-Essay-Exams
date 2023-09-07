@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-header">
+        <h3>{{title}}</h3>
+    </div>
+    <div class="card-body">
+        <form method="POST" id="secureForm">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-2">
+                        <label for=" bobot_nilai">Bobot Nilai</label>
+                    </div>
+                    <div class="col-10">
+                        <input type="text" name="bobot_nilai" class="form-control input_tag"
+                            placeholder="Bobot Nilai Dalam Persentase..." value="{{ bobotnilai }}" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-2">
+                        <label for=" question_editor">Question</label>
+                    </div>
+                    <div class="col-10">
+                        <textarea id="question_editor" class="form-control input_tag" name="question_content"
+                            placeholder="Type questions here..." required>{{question}}</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-end">
+                    <button type="submit" id="submitButton" class="btn btn-outline-primary">{{btnText}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

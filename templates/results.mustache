@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-header">
+        <div class="d-flex justify-content-between">
+            <h5>Quiz Results</h5>
+            <form method="POST">
+                <button type="submit" class="btn btn-outline-primary">Download details to Excel</button>
+            </form>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Fullname</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Total answers</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#user_attempts}}
+                <tr>
+                    <th scope="row">{{ number }}</th>
+                    <td><a href="{{ detailURL }}" class="link-primary">{{firstname}} {{lastname}}</a></td>
+                    <td>{{username}}</td>
+                    <td>{{total_attempts}}</td>
+                </tr>
+                {{/user_attempts}}
+            </tbody>
+        </table>
+    </div>
+</div>

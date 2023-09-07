@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-header">
+        <h5>User: {{user_fullname}}</h5>
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+            {{#user_attempts}}
+                <p class="mb-0 d-inline">{{number}}. <p class="enc_question d-inline">{{question}}</p> (Bobot Nilai: {{bobot_nilai}})</p>
+                <p class="mb-0">Answer : </p><p class="enc_answer">{{answer}}</p>
+            {{/user_attempts}}
+        </div>
+    </div>
+</div>
